@@ -5,6 +5,8 @@
 // @author       ammh
 // @match        https://imaluum.iium.edu.my/*
 // @match        https://souq.iium.edu.my/*
+// @match        https://cas.iium.edu.my/cas/*
+// @match        https://cas.iium.edu.my:8448/cas/*
 // @icon         https://i.imgur.com/lvVUlHK.png
 // @require      http://code.jquery.com/jquery-3.4.1.min.js
 // @grant        GM_addStyle
@@ -19,6 +21,7 @@
     $('table[class="table table-hover"]').attr('class', 'table')
     $('img[class="user-image"]').remove()
     $('li').find('a').attr('id', 'idhover1')
+    $('.login-header-iium').find('img').attr('src', 'https://i.imgur.com/4TI9XCc.png')
 })();
 
 (function(css) {
@@ -36,6 +39,8 @@
     GM_addStyle('a[data-toggle="tab"] { background-color: #242424 !important; }')
     GM_addStyle('#idhover1:hover { background: #22292c !important; transition: 0.3s !important; }')
     GM_addStyle(".sf-reset > h1 { text-align: center !important; }")
+    GM_addStyle(".login-header-iium { background-color: #363636 !important; }")
+    GM_addStyle("#login { background-color: #4e4e4e !important; }")
 })();
 
 (function(csssouqiium) {
@@ -43,3 +48,4 @@
     GM_addStyle('.form-select { color: white !important; background: #484848 !important; border: none !important; transition: 0.3s !important; }')
 
     })();
+
